@@ -16,7 +16,18 @@ b. confirm <* alt="*"> == True, i.e. there is Alt attribute available.
 """
 
 class non_text_content(unittest.TestCase):
-    def test_a(self):
+	def if_x_in_y(self, element, driver):
+	
+	def confirm_alt_text(self, element, driver):
+		prevTitle = driver.title
+		elemText = element.text
+		element.send_keys(Keys.RETURN)
+		self.assertNotEqual(driver.title, prevTitle, prevTitle + " is persistant amongst pages.")
+		
+		for words in driver.title:
+			if word in driver.title:
+				self.in_title = True
+		self.assertTrue(self.in_title, "No 
         
 
 #1.2.1 Audio-only and Video-only (Prerecorded)
